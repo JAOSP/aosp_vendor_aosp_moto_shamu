@@ -1,12 +1,12 @@
 #!/bin/bash
 echo "Please wait..."
-wget -nc -q https://dl.google.com/dl/android/aosp/shamu-lrx21o-factory-e028f5ea.tgz
-tar zxf shamu-lrx21o-factory-e028f5ea.tgz
-rm shamu-lrx21o-factory-e028f5ea.tgz
-cd shamu-lrx21o
-unzip image-shamu-lrx21o.zip
+wget -nc -q https://dl.google.com/dl/android/aosp/shamu-lrx22c-factory-ff173fc6.tgz
+tar zxf shamu-lrx22c-factory-ff173fc6.tgz
+rm shamu-lrx22c-factory-ff173fc6.tgz
+cd shamu-lrx22c
+unzip image-shamu-lrx22c.zip
 cd ../
-./simg2img shamu-lrx21o/system.img system.ext4.img
+./simg2img shamu-lrx22c/system.img system.ext4.img
 mkdir tmp
 sudo mount -o loop -t ext4 system.ext4.img tmp
 sync
@@ -76,5 +76,5 @@ cp -a tmp/media/audio/ui/audio_initiate.ogg system/media/audio/ui/audio_initiate
 
 sudo umount tmp
 rm -rf tmp
-rm -rf shamu-lrx21o
+rm -rf shamu-lrx22c
 rm system.ext4.img
