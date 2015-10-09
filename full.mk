@@ -4,11 +4,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Titania.ogg \
     ro.config.notification_sound=Tethys.ogg \
     ro.config.alarm_alert=Oxygen.ogg \
-    ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.com.google.clientidbase=android-google \
+    ro.carrier=unknown \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.error.receiver.system.apps=com.google.android.gms \
     ro.setupwizard.enterprise_mode=1 \
@@ -29,7 +29,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.voicerec=false \
     persist.audio.fluence.speaker=false \
     keyguard.no_require_sim=true \
-    drm.service.enabled=true
+    drm.service.enabled=true \
+    persist.rcs.supported=0 \
+    persist.radio.sib16_support=1 \
+    persist.data.qmi.adb_logmask=0 \
+    persist.data.iwlan.enable=true \
+    persist.radio.ignore_ims_wlan=1 \
+    persist.radio.data_con_rprt=1 \
+    ro.build.expect.bootloader=moto-apq8084-71.15 \
+    ro.build.expect.baseband=D4.01-9625-05.27+FSG-9625-02.104
+
 
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage13.mk)
 
