@@ -37,7 +37,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.ignore_ims_wlan=1 \
     persist.radio.data_con_rprt=1 \
     ro.build.expect.bootloader=moto-apq8084-71.15 \
-    ro.build.expect.baseband=D4.01-9625-05.27+FSG-9625-02.104
+    ro.build.expect.baseband=D4.01-9625-05.32+FSG-9625-02.109
 
 
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage13.mk)
